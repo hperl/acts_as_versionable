@@ -1,0 +1,8 @@
+Description:
+    Versionizes the given model.
+
+Example:
+    rails generate versionize Article
+
+    This will create:
+        db/migrations/XXXX_create_versions_for_articles.rb

@@ -1,14 +1,20 @@
-# ActsAsVersionable
-module ActsAsVersionable
+require 'rails'
 
+module ActsAsVersionable
+  class Railtie < Rails::Railtie
+    config.after_initialize do
+      ActiveRecord::Base.send(:include, ActsAsVersionable)
+    end
+  end
+    
   class NoSuchVersionError < Exception; end
-  
+
   def self.included(base)
     base.extend ClassMethods
   end
 
   module ClassMethods
-  
+
     def create_class(name, superclass, &block)
       klass = Class.new superclass, &block
       Object.const_set name, klass
@@ -39,7 +45,7 @@ module ActsAsVersionable
 
     def revert_to(version)
       revision = versions.find_by_versioned_as(version) 
-      
+    
       raise NoSuchVersionError, "Couldn't find #{version} version" if revision.blank?
 
       versions.actual_columns.each do |column|
@@ -52,7 +58,7 @@ module ActsAsVersionable
     end
 
     private
-      
+    
     def apply_versioning
       unless self.local_changes
         version_content = {}
@@ -74,6 +80,5 @@ module ActsAsVersionable
     end
 
   end
-
 end
 

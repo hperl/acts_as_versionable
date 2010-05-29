@@ -21,3 +21,19 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+begin
+  require "jeweler"
+  Jeweler::Tasks.new do |gem|
+    gem.name = "acts_as_versionable"
+    gem.summary = "Add support for versions to your model"
+    gem.email = "henning.perl@gmail.com"
+    gem.homepage = "http://github.com/hperl/acts_as_versionable"
+    gem.authors = ["Pavel Y.", "Henning Perl"]
+    gem.files = Dir["*", "{lib}/**/*"]
+  end
+
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+end
