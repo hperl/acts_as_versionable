@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
-     "acts_as_versionable-2.0.0.gem",
      "acts_as_versionable.gemspec",
      "init.rb",
      "install.rb",
