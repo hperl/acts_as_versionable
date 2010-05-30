@@ -17,9 +17,13 @@ class VersionizeGenerator < Rails::Generators::Base
       raise Rails::Generators::Error.new("Could not find model '#{@model_name}'")
     end
   end
+
+  def model_name
+    @model_name.downcase!
+  end
   
   def versions_table
-    @model_name.downcase + '_versions'
+    @model_name + '_versions'
   end
 
   def columns
