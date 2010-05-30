@@ -1,5 +1,8 @@
 = Acts As Versionable
 
+=== Requirements
+  * Requires Rails 3.0
+
 === Why?
  Since I found no good plugins/gems I decided to write my own.
 
