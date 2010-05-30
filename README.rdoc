@@ -18,7 +18,8 @@
 
 === Installation
   
-  Simply run `script/plugin install git://github.com/xedin/acts_as_versionable.git`
+  put `gem 'acts_as_versionable', '>= 2.0.0', :git => 'git://github.com/hperl/acts_as_versionable.git'` in your Gemfile.
+  run `rails g versionize ModelName` to create a versions table.
   
 === Example
 
