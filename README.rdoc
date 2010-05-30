@@ -1,25 +1,25 @@
 = Acts As Versionable
 
 === Requirements
-  * Requires Rails 3.0
+* Requires Rails 3.0
 
 === Why?
- Since I found no good plugins/gems I decided to write my own.
+Since I found no good plugins/gems I decided to write my own.
 
-  * acts_as_versioned does not support current rails with dirty attribute handling
-  * version_fu does not provide easy to use sintax
+* acts_as_versioned does not support current rails with dirty attribute handling
+* version_fu does not provide easy to use sintax
 
 === Goals?
  
-  * Tracking the versions.
-  * Applying diffs to the versions of to the specific instances of the model.
-  * Reverting bitween versions.
-  * Will give you possibility track changes on only required fields of your model.
+* Tracking the versions.
+* Applying diffs to the versions of to the specific instances of the model.
+* Reverting bitween versions.
+* Will give you possibility track changes on only required fields of your model.
 
 === Installation
   
-  put `gem 'acts_as_versionable', '>= 2.0.0', :git => 'git://github.com/hperl/acts_as_versionable.git'` in your Gemfile.
-  run `rails g versionize ModelName` to create a versions table.
+put `gem 'acts_as_versionable', '>= 2.0.0', :git => 'git://github.com/hperl/acts_as_versionable.git'` in your Gemfile.
+run `rails g versionize ModelName` to create a versions table.
   
 === Example
 
