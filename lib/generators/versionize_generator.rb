@@ -19,7 +19,7 @@ class VersionizeGenerator < Rails::Generators::Base
   end
 
   def model_name
-    @model_name.downcase!
+    @model_name.downcase
   end
   
   def versions_table
